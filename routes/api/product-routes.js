@@ -18,7 +18,6 @@ router.get('/', async (req, res) => {
   catch(err) {
     res.status(500).json(err)
   }
-
 });
 
 // get one product
@@ -137,7 +136,6 @@ router.delete('/:id', (req, res) => {
       );
       return;
     }
-
   res.status(200).json(deletedProduct)
   }
   catch(err) {
