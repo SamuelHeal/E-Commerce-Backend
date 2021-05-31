@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
   try {
     const categoryInfo = await Category.findAll(
       {
-        include: [{model: Product}]
+        include: [{ model: Product }]
       }
     );
     res.status(200).json(categoryInfo)
@@ -27,7 +27,7 @@ router.get('/:id', async (req, res) => {
   try {
     const singleCategory = await Category.findByPk(req.params.id, 
       {
-        include: [{model: Product}]
+        include: [{ model: Product }]
       }
     );
     if (!singleCategory){
